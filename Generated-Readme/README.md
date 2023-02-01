@@ -19,13 +19,13 @@ Introducing the Command Line Node.js Readme Generator - a tool that streamlines 
 
 ---
 ## Installation
-To use this code to generate your own readme, git clone the repo so you have a local copy on your machine. Run npm i inquirer@8.2.4 to install the inquirer npm package dependencies.
+To use this code to generate your own readme, **git clone** the repo so you have a local copy on your machine. Run **npm i inquirer@8.2.4** to install the inquirer npm package dependencies.
 
 [BACK TO TOP](#top)
 
 ---
 ## Usage
-In the command line enter node index.js to start the application. Answer the prompts in your command line to generate the README. After answering all the prompts, your README file will be named 'README.md' and will be ready for you in the Generated-Readme folder.
+In the command line enter **node index.js** to start the application. Answer the prompts in your command line to generate the README. After answering all the prompts, your README file will be named 'README.md' and will be ready for you in the Generated-Readme folder.
 
 [BACK TO TOP](#top)
 
