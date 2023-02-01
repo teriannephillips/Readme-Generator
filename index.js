@@ -2,7 +2,7 @@
 //required packages
 const inquirer = require("inquirer")
 const fs = require('fs');
-//inquirer
+//inquirer package with questions
 inquirer.prompt([
     {
       type: 'input',
@@ -53,12 +53,14 @@ inquirer.prompt([
     message: 'Please enter your repository name'
     },
   ]).then(answers => {
-    writeToFile('README.md', answers);
+    //call the function to write the readme file
+    writeToFile('./Generated-Readme/README.md', answers);
   });
-  // // TODO: Create a function to write README file
+//function to write the README file
 function writeToFile(fileName, answers) {
-  fs.writeFile('test.md',`# ${answers.title}\n<img src="https://img.shields.io/github/license/${answers.username}/${answers.repo}">\n
----\n## Table of Contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Licence](#licence)\n* [Questions](#questions)\n ---\n## Description\n${answers.description}\n
+  fs.writeFile(fileName,`# ${answers.title}\n<img src="https://img.shields.io/github/license/${answers.username}/${answers.repo}">\n
+---\n## Table of Contents\n* [Description](#description)\n* [Installation](#installation)\n* [Usage](#usage)\n* [Contributing](#contributing)\n* [Tests](#tests)\n* [Licence](#licence)\n* [Questions](#questions)\n
+---\n## Description\n${answers.description}\n
 [BACK TO TOP](#top)\n
 ---\n## Installation\n${answers.installation}\n
 [BACK TO TOP](#top)\n
@@ -74,7 +76,7 @@ function writeToFile(fileName, answers) {
 [E-mail me](mailto:${answers.email}) if you have any further questions!\n
 [BACK TO TOP](#top)
   `, (err) =>
-  err ? console.error(err) : console.log('Commit logged!')
+  err ? console.error(err) : console.log('Your readme had been created and located in the Generated-Readme folder!')
 );
 
 
